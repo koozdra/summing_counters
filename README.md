@@ -3,9 +3,13 @@ A Phoenix application that listens on port `3333` and accepts json post requests
 
 ## Getting up and running
 `docker pull postgres`
+
 `docker run --name postgresql-container -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres`
+
 `mix ecto.setup`
+
 `mix deps.get`
+
 `mix phx.server`
 
 ## Integration Test
