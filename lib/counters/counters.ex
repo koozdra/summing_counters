@@ -2,7 +2,6 @@ defmodule Counters.Counters do
   alias Counters.{Repo, Counter}
 
   def write_counter(name, value) do
-    # Counters.Repo.insert(%Counters.Counter{key: name, sum: value})
     Repo.query(
         """
         insert into counters (key, sum)
@@ -17,6 +16,4 @@ defmodule Counters.Counters do
   def read_counter(name) do
     Repo.get(Counter, name)
   end
-
-
 end
